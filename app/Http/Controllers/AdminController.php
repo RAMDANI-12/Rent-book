@@ -91,7 +91,7 @@ class AdminController extends Controller
          $request['cover'] = $newName;
          $book = Book::create($request->all());
          $book->categories()->sync($request->categories);
-         return redirect('book')->with('status', 'Book Added Successfully');
+         return redirect('book')->with('status', 'Book Add Successfully');
     }
 
     public function bookEdit($slug)
@@ -118,8 +118,8 @@ class AdminController extends Controller
 
     public function booksDestroy($slug){
       $books = Book::where('slug',$slug)->first();
-      $books->delate();
-      return redirect('admin.book')->with('status','Book delated succesfuly');
+      $books->delete();
+      return redirect('book')->with('status','Book delated succesfuly');
     }
 
     public function rentlogs()
