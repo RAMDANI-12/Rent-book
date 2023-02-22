@@ -13,6 +13,12 @@
         border-radius: 15px 70px;
         box-shadow: 1px 2px 3px 1px rgba(0,0,0,0.8);
     }
+    .alert{
+        border:  1px solid;
+        padding: 15px;
+        border-radius: 15px 70px;
+        box-shadow: 1px 2px 3px 1px rgba(0,0,0,0.8);
+    }
   </style>
   <body>
       <div class="container d-flex flex-column justify-content-center align-items-center" style="height:100vh;">

@@ -64,7 +64,7 @@
     </style>
 <body>
     <div class="main d-flex flex-column justify-content-between">
-    <nav class="navbar navbar-expand-lg" style="background-color: #110101;">
+    <nav class="navbar navbar-dark navbar-expand-lg" style="background-color: #110101;">
             <div class="container">
                 <a class="navbar-brand" href="#">RENTBOOKS</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -81,11 +81,12 @@
             <a href="/dashboard" @if(request()->route()->uri == 'dashboard') class= 'active' @endif><i class="bi bi-house-door"></i> Dashboard</a>
             <a href="/users" @if(request()->route()->uri == 'users') class= 'active' @endif><i class="bi bi-person"></i> Users</a>
             <a href="/category" @if(request()->route()->uri == 'category') class= 'active' @endif><i class="bi bi-bookmarks"></i> Category</a>
-            <a href="/book" @if(request()->route()->uri == 'books') class= 'active' @endif><i class="bi bi-book-half"></i> Books</a>
+            <a href="/book" @if(request()->route()->uri == 'book') class= 'active' @endif><i class="bi bi-book-half"></i> Books</a>
             <a href="/rentlogs" @if(request()->route()->uri == 'rentlogs') class= 'active' @endif><i class="bi bi-cart-plus"></i> RentLogs</a>
             <a href="/logout" class="mb-2 position-absolute bottom-0 start-0 bi bi-box-arrow-left"> Logout</a>
             @else
-            <a href="/#" @if(request()->route()->uri == 'profile') class= 'active' @endif><i class="bi bi-person"></i> Profile</a>
+            <a href="/profile" @if(request()->route()->uri == 'profile') class= 'active' @endif><i class="bi bi-person"></i> Profile</a>
+            <a href="/book-user" @if(request()->route()->uri == 'book-user') class= 'active' @endif><i class="bi bi-book-half"></i> Books</a>
             <a href="/logout" class="position-absolute bottom-0 start-0 bi bi-box-arrow-left"> Logout</a>
             @endif
         </div>

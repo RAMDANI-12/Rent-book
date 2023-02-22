@@ -29,6 +29,8 @@ Route::middleware('guest')->group(function(){
 
 Route::middleware('auth')->group(function(){
     Route::get('profile',[UserController::class, 'profile'])->middleware('only_client');
+    //books user
+    Route::get('book-user',[UserController::class,'book']);
     Route::get('dashboard',[AdminController::class, 'index'])->middleware('only_admin');
     Route::get('category',[AdminController::class, 'categorys'])->middleware('only_admin');
     Route::get('category-add',[AdminController::class, 'categoryAdd'])->middleware('only_admin');

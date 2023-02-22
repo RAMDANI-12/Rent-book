@@ -3,6 +3,9 @@
 @section('title', 'Profile')
 
 @section('content')
-<h1>Ini halaman user</h1>
+
+
+<h1>Welcome {{Auth::user()->username}} </h1>
+
 
 @endsection
