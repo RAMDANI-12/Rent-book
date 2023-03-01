@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\RentLogController;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\AuthController;
@@ -53,6 +54,8 @@ Route::middleware('auth')->group(function(){
     Route::put('books-edit/{slug}',[AdminController::class,'bookUpdate']);
     Route::get('books-delete/{slug}',[AdminController::class,'booksDestroy']);
     Route::get('rentlogs',[AdminController::class, 'rentlogs'])->middleware('only_admin');
+    Route::get('rentlog-add',[RentLogController::class,'add']);
+    Route::post('rentlog-add',[RentLogController::class, 'store']);
     Route::get('logout', [AuthController::class, 'logout']);
 });
 
